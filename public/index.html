@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta del Clima</title>
+  <style>
+    #weatherResult {
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    #weatherResult h2 {
+      margin-bottom: 10px;
+    }
+
+    #weatherDetails div {
+      margin-bottom: 5px;
+    }
+
+    #weatherDetails strong {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Consulta del Clima</h1>
+  <form id="weatherForm">
+    <input type="text" id="locationInput" placeholder="Ingresa una localidad">
+    <button type="submit">Consultar Clima</button>
+  </form>
+  <div id="weatherResult" style="display: none;">
+    <h2>Weather in <span id="locationName"></span></h2>
+    <div id="weatherDetails">
+      <div>
+        <strong>Temperature:</strong> <span id="temperature"></span>°C
+      </div>
+      <div>
+        <strong>Weather:</strong> <span id="weatherDescription"></span>
+      </div>
+      <div>
+        <strong>Wind:</strong> <span id="windSpeed"></span> km/h from <span id="windDirection"></span>
+      </div>
+      <div>
+        <strong>Pressure:</strong> <span id="pressure"></span> mb
+      </div>
+      <div>
+        <strong>Humidity:</strong> <span id="humidity"></span>%
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
