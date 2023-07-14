@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const {apiKey} = require('./_secrets.js')
+const {apiKey} = require('./_secrets');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.get('/weather', async (req, res) => {
   try {
     const { query } = req;
-    //const apiKey = 'a518cecc5177c424ce34650a69b9662b'; 
+     
 
     if (!query.location) {
       throw new Error('No se proporcionó ninguna localidad.');
